@@ -1,5 +1,4 @@
-#PREFIX := /usr/local
-PREFIX := ${HOME}/.local
+PREFIX = /usr/local
 
 CC := gcc
 CFLAGS := -O3 -Wall -Wextra
@@ -26,6 +25,7 @@ install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	install -m 0755 dwmblocks ${DESTDIR}${PREFIX}/bin/dwmblocks
 	install -m 0755 sigdwmblocks ${DESTDIR}${PREFIX}/bin/sigdwmblocks
+	install -m 0755 daemons/pulse_daemon.sh ${DESTDIR}${PREFIX}/bin/pulse_daemon
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks ${DESTDIR}${PREFIX}/bin/sigdwmblocks
