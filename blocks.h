@@ -17,9 +17,11 @@ static Block blocks[] = {
 
         { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),             1,              4},
 
-        { PATH("battery.sh"),           PATH("battery_button.sh"),              30,             2},
+	{ PATH("cpu_temp.sh"),		PATH("cpu_temp_button.sh"),		1,		4},
 
-	{ PATH("time_calendar.sh"),	NULL,					60,		10},
+	{ PATH("battery.sh"),		NULL,                       		30,		2},
+
+	{ PATH("time_calendar.sh"),	PATH("time_calendar_button.sh"),        60,		3},
 
         { NULL } /* just to mark the end of the array */
 };
