@@ -1,5 +1,5 @@
 /* time interval in seconds to sleep before looking for updates in the main loop */
-#define SLEEPINTERVAL                   1
+#define SLEEPINTERVAL			1
 
 #define PATH(name)			"/home/mario/mintelm//dwmblocks/blocks/"name
 
@@ -13,13 +13,15 @@
 /* pathu - path of the program whose output is to be used for status text
  * pathc - path of the program to be executed on clicks */
 static Block blocks[] = {
-        { PATH("volume.sh"),            PATH("volume_button.sh"),               0,              1},
+/*	pathu				pathc					interval	signal */
 
-        { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),             1,              4},
+	{ PATH("arch_pkg.sh"),		PATH("arch_pkg_button.sh"),             0,		2},
 
 	{ PATH("cpu_temp.sh"),		PATH("cpu_temp_button.sh"),		1,		4},
 
-	{ PATH("battery.sh"),		NULL,                       		30,		2},
+	{ PATH("volume.sh"),		PATH("volume_button.sh"),		0,		1},
+
+	{ PATH("battery.sh"),		NULL,                       		30,		0},
 
 	{ PATH("time_calendar.sh"),	PATH("time_calendar_button.sh"),        60,		3},
 
