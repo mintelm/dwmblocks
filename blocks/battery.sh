@@ -2,7 +2,7 @@
 read -r capacity </sys/class/power_supply/BAT0/capacity
 read -r batstatus < /sys/class/power_supply/BAT0/status
 
-if [ "$batstatus" = "Charging" ]; then
+if [ "$batstatus" != "Discharging" ]; then
         charging="ﮣ "
 fi
 
